@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import mezoLogo from "../assets/mezo-logo-inline.svg";
+import strideLogo from "../assets/stride-logo.png";
 import { useNavigate } from "@tanstack/react-router";
 
 export default function Onboarding() {
@@ -7,8 +8,11 @@ export default function Onboarding() {
 
   return (
     <VStack gap={20}>
-      <VStack gap={3}>
-        <Text>App name</Text>
+      <VStack gap={4}>
+        <Image
+          src={strideLogo}
+          h="72px"
+        />
         <Flex
           alignItems="center"
           gap={3}
@@ -25,8 +29,8 @@ export default function Onboarding() {
       </Heading>
       <Button
         colorScheme="red"
-        fontSize="36px"
-        height="56px"
+        fontSize="28px"
+        height="48px"
         px={10}
         onClick={() => navigate({ to: "/login" })}
       >
