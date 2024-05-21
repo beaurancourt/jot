@@ -1,4 +1,5 @@
 import { CounterpartyBetProps } from "./components/CounterpartyBet";
+import { LeaderboardItemProps } from "./components/LeaderboardItem";
 
 export const POINTS = 20_127;
 
@@ -42,8 +43,17 @@ export const AVAILABLE_BETS: AvailableBet[] = [
   },
 ];
 
-type Leaderboard = { name: string; streak: number; points: number };
-
-export const LEADERBOARD: Leaderboard[] = [
+export const LEADERBOARD: LeaderboardItemProps[] = [
   { name: "abc", streak: 8, points: 10_000 },
+  { name: "xyz", streak: 4, points: 9_000 },
+  { name: "test", streak: 3, points: 8_500 },
+  { name: "test2", streak: 11, points: 8_400 },
+  { name: "xyzyz", streak: 2, points: 7_100 },
+  { name: "uwa", streak: 2, points: 7_000 },
+  { name: "yes", streak: 1, points: 7_000 },
+  { name: "bet", streak: 4, points: 6_700 },
+  { name: "ghi", streak: 5, points: 6_600 },
+  { name: "jkl", streak: 5, points: 6_500 },
+  { name: "love", streak: 6, points: 5_900 },
+  { name: "bar", streak: 2, points: 5_400 },
 ];

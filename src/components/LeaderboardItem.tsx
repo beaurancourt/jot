@@ -1,7 +1,18 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import fireIcon from "../assets/fire-solid.svg";
 
-export default function LeaderboardItem() {
+export type LeaderboardItemProps = {
+  name: string;
+  streak: number;
+  points: number;
+};
+
+export default function LeaderboardItem({
+  name,
+  streak,
+  points,
+  place,
+}: LeaderboardItemProps & { place: number }) {
   return (
     <Flex
       w="100%"
@@ -10,11 +21,12 @@ export default function LeaderboardItem() {
       bg="pink"
       rounded="4px"
     >
+      <Text w="10%">{place}</Text>
       <Text
-        w="50%"
+        w="40%"
         fontWeight={500}
       >
-        abc.mezo
+        {name}.mezo
       </Text>
       <Flex
         w="10%"
@@ -23,7 +35,7 @@ export default function LeaderboardItem() {
         justifyContent="center"
         gap={1}
       >
-        <Text>8</Text>
+        <Text>{streak}</Text>
         <Image
           src={fireIcon}
           w="16px"
@@ -35,7 +47,7 @@ export default function LeaderboardItem() {
         w="40%"
         textAlign="right"
       >
-        10,000
+        {points.toLocaleString("en-US")}
       </Text>
     </Flex>
   );

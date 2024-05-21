@@ -1,4 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { LEADERBOARD } from "../constants";
+import LeaderboardItem from "../components/LeaderboardItem";
 
 export default function Leaderboard() {
   return (
@@ -12,7 +14,8 @@ export default function Leaderboard() {
         borderBottomColor="red"
         borderBottomStyle="solid"
       >
-        <Text w="50%">Name</Text>
+        <Text w="10%">#</Text>
+        <Text w="40%">Name</Text>
         <Text
           w="10%"
           textAlign="center"
@@ -26,6 +29,14 @@ export default function Leaderboard() {
           Earned points
         </Text>
       </Flex>
+      {LEADERBOARD.map(({ name, streak, points }, index) => (
+        <LeaderboardItem
+          place={index + 1}
+          name={name}
+          streak={streak}
+          points={points}
+        />
+      ))}
     </>
   );
 }
