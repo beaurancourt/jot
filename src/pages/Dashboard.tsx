@@ -33,10 +33,11 @@ export default function Dashboard() {
             Current commitment
           </Text>
           <Text>
-            Steps: <strong>{commitment.toLocaleString("en-US")}</strong> steps
+            Steps: <strong>{Number(commitment).toLocaleString("en-US")}</strong>{" "}
+            steps
           </Text>
           <Text>
-            Bet: <strong>{bet.toLocaleString("en-US")}</strong> points
+            Bet: <strong>{Number(bet).toLocaleString("en-US")}</strong> points
           </Text>
         </VStack>
         <VStack
@@ -50,7 +51,8 @@ export default function Dashboard() {
             thesis.mezo
           </Text>
           <Text>
-            Available points: {(POINTS - bet).toLocaleString("en-US")}
+            Available points:{" "}
+            <strong>{(POINTS - bet).toLocaleString("en-US")}</strong>
           </Text>
         </VStack>
       </Flex>
@@ -63,7 +65,7 @@ export default function Dashboard() {
         />
       ))}
       <Heading
-        mt={10}
+        mt={20}
         mb={5}
       >
         Bets against you

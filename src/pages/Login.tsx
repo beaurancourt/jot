@@ -42,10 +42,11 @@ export default function Login() {
       <VStack gap={10}>
         <Heading>Stay committed!</Heading>
         <Text fontSize="24px">
-          <strong>Commitment:</strong> {commitment} steps
+          <strong>Commitment:</strong>{" "}
+          {Number(commitment).toLocaleString("en-US")} steps
         </Text>
         <Text fontSize="24px">
-          <strong>Bet:</strong> {bet} points
+          <strong>Bet:</strong> {Number(bet).toLocaleString("en-US")} points
         </Text>
         <Button
           colorScheme="red"
@@ -101,7 +102,7 @@ export default function Login() {
             w="100%"
             onClick={onOpen}
           >
-            Connect tracking app
+            {appConnected ? "Connected" : "Connect tracking app"}
           </Button>
           <Button
             colorScheme="red"
