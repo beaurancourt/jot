@@ -6,7 +6,10 @@ export default function App() {
   return (
     <>
       <Header />
-      <Container py={10}>
+      <Container
+        py={10}
+        maxW="640px"
+      >
         <Outlet />
       </Container>
     </>

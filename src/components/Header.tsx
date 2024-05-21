@@ -11,6 +11,8 @@ export default function Header() {
   return (
     <Flex
       w="100%"
+      maxW="640px"
+      mx="auto"
       gap={5}
       py={2}
     >

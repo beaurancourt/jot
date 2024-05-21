@@ -76,10 +76,10 @@ export default function AvailableBets({
             <Flex gap={1}>
               {streak.map((value) => (
                 <Box
-                  h="8px"
-                  w="8px"
+                  h="12px"
+                  w="12px"
                   rounded="100%"
-                  bg={value ? "green" : "red"}
+                  bg={value ? "red" : "lightgray"}
                 />
               ))}
             </Flex>
