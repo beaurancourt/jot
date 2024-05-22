@@ -16,9 +16,9 @@ export default function Dashboard() {
       <Flex
         w="100%"
         justifyContent="space-between"
-        bg="red"
-        p={4}
+        bg="#02A9A4"
         color="white"
+        p={4}
         rounded="16px"
         mb={10}
       >

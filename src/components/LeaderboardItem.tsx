@@ -18,7 +18,8 @@ export default function LeaderboardItem({
       w="100%"
       mb={2}
       p={2}
-      bg="pink"
+      bg="#02A9A4"
+      color="white"
       rounded="4px"
     >
       <Text w="10%">{place}</Text>
@@ -41,6 +42,7 @@ export default function LeaderboardItem({
           w="16px"
           h="16px"
           objectFit="contain"
+          filter="invert(1)"
         />
       </Flex>
       <Text

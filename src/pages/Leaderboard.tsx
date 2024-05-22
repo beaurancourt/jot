@@ -11,7 +11,7 @@ export default function Leaderboard() {
         pb={1}
         px={2}
         borderBottomWidth="1px"
-        borderBottomColor="red"
+        borderBottomColor="#02A9A4"
         borderBottomStyle="solid"
       >
         <Text w="10%">#</Text>
@@ -29,14 +29,16 @@ export default function Leaderboard() {
           Earned points
         </Text>
       </Flex>
-      {LEADERBOARD.map(({ name, streak, points }, index) => (
-        <LeaderboardItem
-          place={index + 1}
-          name={name}
-          streak={streak}
-          points={points}
-        />
-      ))}
+      {[...LEADERBOARD]
+        .sort((a, b) => b.points - a.points)
+        .map(({ name, streak, points }, index) => (
+          <LeaderboardItem
+            place={index + 1}
+            name={name}
+            streak={streak}
+            points={points}
+          />
+        ))}
     </>
   );
 }

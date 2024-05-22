@@ -28,7 +28,9 @@ export default function Onboarding() {
         Connect to Mezo and commit
       </Heading>
       <Button
-        colorScheme="red"
+        bg="#02A9A4"
+        color="white"
+        _hover={{ bg: "#03D4AC" }}
         fontSize="28px"
         height="48px"
         px={10}

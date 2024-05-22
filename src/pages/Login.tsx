@@ -49,7 +49,9 @@ export default function Login() {
           <strong>Bet:</strong> {Number(bet).toLocaleString("en-US")} points
         </Text>
         <Button
-          colorScheme="red"
+          bg="#02A9A4"
+          color="white"
+          _hover={{ bg: "#03D4AC" }}
           fontSize="20px"
           height="48px"
           px={4}
@@ -94,7 +96,9 @@ export default function Login() {
         />
         <Flex gap={5}>
           <Button
-            colorScheme="red"
+            bg="#02A9A4"
+            color="white"
+            _hover={{ bg: "#03D4AC" }}
             fontSize="20px"
             isDisabled={appConnected}
             height="48px"
@@ -105,7 +109,9 @@ export default function Login() {
             {appConnected ? "Connected" : "Connect tracking app"}
           </Button>
           <Button
-            colorScheme="red"
+            bg="#02A9A4"
+            color="white"
+            _hover={{ bg: "#03D4AC" }}
             isDisabled={!appConnected || !commitment || !bet}
             fontSize="20px"
             height="48px"
@@ -141,28 +147,30 @@ export default function Login() {
           >
             <Button
               w="100%"
-              bg={trackingApp === 1 ? "red" : "lightgray"}
+              bg={trackingApp === 1 ? "#02A9A4" : "lightgray"}
               onClick={() => setTrackingApp(1)}
             >
               Fitbit
             </Button>
             <Button
               w="100%"
-              bg={trackingApp === 2 ? "red" : "lightgray"}
+              bg={trackingApp === 2 ? "#02A9A4" : "lightgray"}
               onClick={() => setTrackingApp(2)}
             >
               Sweat
             </Button>
             <Button
               w="100%"
-              bg={trackingApp === 3 ? "red" : "lightgray"}
+              bg={trackingApp === 3 ? "#02A9A4" : "lightgray"}
               onClick={() => setTrackingApp(3)}
             >
               7 Minute Workout
             </Button>
           </VStack>
           <Button
-            colorScheme="red"
+            bg="#02A9A4"
+            color="white"
+            _hover={{ bg: "#03D4AC" }}
             fontSize="20px"
             isDisabled={!trackingApp}
             height="48px"

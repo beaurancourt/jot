@@ -20,7 +20,7 @@ export default function CounterpartyBet({
       mb={4}
       borderBottom="2px"
       borderStyle="solid"
-      borderColor="red"
+      borderColor="#02A9A4"
     >
       <Flex
         w="100%"

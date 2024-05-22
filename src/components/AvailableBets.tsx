@@ -18,7 +18,7 @@ export default function AvailableBets({
       mb={4}
       borderBottom="2px"
       borderStyle="solid"
-      borderColor="red"
+      borderColor="#02A9A4"
     >
       <Flex
         w="100%"
@@ -60,7 +60,9 @@ export default function AvailableBets({
         </VStack>
         <VStack alignItems="flex-end">
           <Button
-            colorScheme="red"
+            bg="#02A9A4"
+            color="white"
+            _hover={{ bg: "#03D4AC" }}
             fontSize="16px"
             height="32px"
             px={4}
@@ -79,7 +81,8 @@ export default function AvailableBets({
                   h="12px"
                   w="12px"
                   rounded="100%"
-                  bg={value ? "red" : "lightgray"}
+                  color="white"
+                  bg={value ? "green" : "lightgray"}
                 />
               ))}
             </Flex>
